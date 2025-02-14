@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar, Thermometer, Wind, Wrench, Award, Building2, School, HeartPulse, Church } from 'lucide-react';
+import { Calendar, Thermometer, Wind, Wrench, Award, Building2, School, HeartPulse, Church, UtensilsCrossed, Hotel } from 'lucide-react';
 
 export function Home() {
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ export function Home() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Specialized Institutional Solutions</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[
               {
                 icon: <HeartPulse className="h-12 w-12 text-orange-600" />,
@@ -65,6 +65,16 @@ export function Home() {
                 icon: <Building2 className="h-12 w-12 text-orange-600" />,
                 title: "Commercial Facilities",
                 description: "Professional HVAC solutions for office buildings, retail spaces, and commercial properties."
+              },
+              {
+                icon: <UtensilsCrossed className="h-12 w-12 text-orange-600" />,
+                title: "Restaurants",
+                description: "Specialized ventilation and temperature control for kitchens, dining areas, and food storage."
+              },
+              {
+                icon: <Hotel className="h-12 w-12 text-orange-600" />,
+                title: "Hospitality",
+                description: "Comprehensive HVAC solutions for hotels, resorts, and guest comfort management."
               }
             ].map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
